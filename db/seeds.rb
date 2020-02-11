@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# require 'rubygems'
+# require 'faker'
+
+Article.destroy_all
+
+10.times do
+  Article.create(
+    title: Faker::Artist.name,
+    content: Faker::Hacker.say_something_smart
+  )
+end
+
+
